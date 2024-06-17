@@ -8,8 +8,51 @@
 </head>
 
 <body>
-
+    <div class="hover"></div>
 </body>
 <script src="./script.js"></script>
+<style>
+    .hover {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 30px rgb(128, 247, 255);
+        /*border: 3px solid silver;*/
+        animation: 0.3s ease-in 0s 1 expand-width forwards;
+        margin: 0;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    @keyframes expand-height {
+        0% {}
+
+        100% {
+            height: 100vh;
+            border-radius: 0px;
+        }
+    }
+
+    @keyframes expand-width {
+        0% {}
+
+        100% {
+            width: 100vw;
+        }
+    }
+
+
+    html {
+        background-color: rgb(26, 26, 26);
+        padding: 0;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+</style>
 
 </html>

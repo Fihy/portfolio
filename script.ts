@@ -1,41 +1,25 @@
+// I like to play a few mind games to cut back as many lines as possible.
+// It may not be the most efficient solution, but it sure is pretty.
+
 /*
  * A giant leap.
+ * Done in 1 line.
  */
 
 console.log("hello world");
 
 /*
  * Document Title
+ * Done in 5 lines.
  */
 
 var i = 0;
 
 setInterval(() => {
-  const pad = (size: number) => {
-    let output = "";
-    for (let i = 0; i < size; i++) output += "⠀";
-    return output;
-  };
-
-  const title_sequences = [
-    "Hello world, I am Fischer Oesterle™, and this is my website.",
-    "You may be wondering who I am.",
-    "Some people know me as a hacker.",
-    "Others know me as a programmer.",
-    "But I am neither of those things.",
-    "Rather, I am an 𝙄𝙣𝙫𝙚𝙣𝙩𝙤𝙧™",
-  ];
-
-  let computed = "";
-  for (let i = 0; i < title_sequences.length; i++) {
-    const sequence = title_sequences[i];
-    if (i == 0) computed += `${pad(35)}${sequence}`;
-    else computed += `${pad(20)}${sequence}`;
-
-    if (i == title_sequences.length - 1) computed += `${pad(35)}`;
-  }
+  const title =
+    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Hello world, I am Fischer Oesterle™, and this is my website.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀You may be wondering who I am.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Some people describe me as a hacker.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Others call me a programmer.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀But truly I am an 𝙄𝙣𝙫𝙚𝙣𝙩𝙤𝙧™⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀";
 
   i++;
-  i = i % (computed.length - 30);
-  document.title = computed.substring(i, i + 30);
+  i = i % (title.length - 30);
+  document.title = title.substring(i, i + 30);
 }, 100);
